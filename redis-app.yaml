@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    app: cache
+    env: dev
+spec:
+  containers:
+    - name: nginx-container
+      image: redis
+
+apiVersion: v1
+kind: pod
+metadata:
+  name: static-web
+  labels:
+    app: static
+    env: prod
+spec:
+  containers:
+    - name: httpd-container
+      image: httpd
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: static-web
+  labels:
+    app: static
+    env: prod
+spec:
+  containers:
+    - name: httpd-container
+      image: httpd
