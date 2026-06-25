@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
-  metadata:
+metadata:
   labels:
-    app: gke-deep-dive-app
+      app: gke-deep-dive-app
   name: gke-deep-dive-app
 spec:
   selector:
-   matchLabels:
-    app: gke-deep-dive-app
+    matchLabels:
+      app: gke-deep-dive-app
   template:
     metadata:
       labels:
@@ -18,4 +18,4 @@ spec:
         name: gke-deep-dive
         ports:
         - containerPort: 9376
-           protocol: TCP
+          protocol: TCP
