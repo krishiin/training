@@ -8,8 +8,8 @@ spec:
   type: ClusterIP
   selector:
     app: gke-deep-dive-app # Selects Pods labelled app: gke-demo-app
-    ports:
-    - name: http
-      port: 80
-      protocol: TCP
-      targetPort: 9376
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 9376
