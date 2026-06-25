@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gke-deep-dive-svc # Name of Service
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}' # Creates a NEG after an Ingress is created
+spec:
+  type: ClusterIP
+  selector:
+    app: gke-deep-dive-app # Selects Pods labelled app: gke-demo-app
+    ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 9376
