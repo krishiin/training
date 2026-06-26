@@ -11,15 +11,15 @@ spec:
     metadata:
       labels:
         app: online
-  spec:
-    containers:
-    - image: gcr.io/google-containers/echoserver:1.10
-      name: gke-deep-dive-app
-      ports:
-      - name: http
-        containerPort: 8080
-      readinessProbe:
-        httpGet:
-          path: /healthz
-          port: 8080
-          scheme: HTTP
+    spec:
+      containers:
+      - image: gcr.io/google-containers/echoserver:1.10
+        name: gke-deep-dive-app
+        ports:
+        - name: http
+          containerPort: 8080
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+            scheme: HTTP
